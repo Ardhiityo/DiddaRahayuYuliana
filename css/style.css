@@ -65,7 +65,8 @@ a:focus {
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
-  font-size: 25px;
+  font-size: 22px;
+  letter-spacing: 0.1px;
 }
 
 .row.m0 {

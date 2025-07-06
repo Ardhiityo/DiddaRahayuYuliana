@@ -182,6 +182,16 @@
 	<script src="vendors/counter-up/jquery.waypoints.min.js"></script>
 	<script src="vendors/counter-up/jquery.counterup.min.js"></script>
 	<script src="js/theme.js"></script>
+	<script>
+		document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+			link.addEventListener('click', () => {
+				const navbar = document.querySelector('.navbar-collapse');
+				if (navbar.classList.contains('show')) {
+					new bootstrap.Collapse(navbar).hide();
+				}
+			});
+		});
+	</script>
 </body>
 
 </html>

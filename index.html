@@ -46,7 +46,7 @@
 					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 						<ul class="nav navbar-nav menu_nav ml-auto">
 							<li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
-							<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+							<li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
 							<li class="nav-item"><a class="nav-link" href="#collaborations">Collaborations</a></li>
 							<li class="nav-item"><a class="nav-link" href="#papers">Papers</a></li>
 							<li class="nav-item"><a class="nav-link" href="#educational">Educational</a></li>
@@ -878,6 +878,16 @@
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
 	<script src="js/gmaps.min.js"></script>
 	<script src="js/theme.js"></script>
+	<script>
+		document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+			link.addEventListener('click', () => {
+				const navbar = document.querySelector('.navbar-collapse');
+				if (navbar.classList.contains('show')) {
+					new bootstrap.Collapse(navbar).hide();
+				}
+			});
+		});
+	</script>
 </body>
 
 </html>
